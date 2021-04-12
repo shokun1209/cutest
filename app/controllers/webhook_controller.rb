@@ -3,8 +3,8 @@ require 'line/bot'
 class WebhookController < ApplicationController
   before_action :set_line_client
 
-  CHANNEL_SECRET = 'b656bf9c4b8e79c2966e60aa43cebaf1' # 記録しておいたChannel Secret 本当はENVでやるのが望ましい
-  CHANNEL_ACCESS_TOKEN = 'R6kNHyWzKcQiNc01rVauNCSFINDILNiLgIs0DShPtokaYpqGNzOLLDsR/dyLj3LZ/3CiZbgqSJvViXJv/5bB2im/+WLoQvyKGjjHSGuyBwwUtLcBKLWnM7vQxx7U3Xq6MdnuWfe/bujl9YPzFcPRVAdB04t89/1O/w1cDnyilFU=' # 記録しておいたアクセストークン 本当はENVでやるのが望ましい
+  CHANNEL_SECRET = ENV['CHANNEL_SECRET'] # 記録しておいたChannel Secret
+  CHANNEL_ACCESS_TOKEN = ENV['CHANNEL_ACCESS_TOKEN'] # 記録しておいたアクセストークン
 
   
   def callback
