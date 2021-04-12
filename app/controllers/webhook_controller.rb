@@ -6,7 +6,8 @@ class WebhookController < ApplicationController
   CHANNEL_SECRET = ENV['CHANNEL_SECRET'] # 記録しておいたChannel Secret
   CHANNEL_ACCESS_TOKEN = ENV['CHANNEL_ACCESS_TOKEN'] # 記録しておいたアクセストークン
 
-  
+  def index
+  end
   def callback
     body = request.body.read
     

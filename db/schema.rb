@@ -10,22 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_10_095731) do
+ActiveRecord::Schema.define(version: 2021_04_12_125840) do
 
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "uploader_id_id"
-    t.bigint "image_id"
-    t.date "photo_date"
-    t.string "content_type"
+    t.string "image"
+    t.string "photo_date"
+    t.bigint "uploader_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["image_id"], name: "index_photos_on_image_id"
-    t.index ["uploader_id_id"], name: "index_photos_on_uploader_id_id"
+    t.index ["uploader_id"], name: "index_photos_on_uploader_id"
   end
 
   create_table "uploaders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "line_id"
-    t.text "token"
+    t.string "token"
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
