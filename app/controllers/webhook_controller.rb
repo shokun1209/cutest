@@ -9,9 +9,9 @@ class WebhookController < ApplicationController
   def callback
     body = request.body.read
     
-    # unless @client.validate_signature(body, request.env['HTTP_X_LINE_SIGNATURE'])
-    #   error 400 do 'Bad Request' end
-    # end
+    unless @client.validate_signature(body, request.env['HTTP_X_LINE_SIGNATURE'])
+      error 400 do 'Bad Request' end
+    end
 
     event = @client.parse_events_from(body)[0]
     message = { text: nil }
