@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'photos#index'
-  resources :photos, only: [:index, :show]
+  resources :photos
   post '/callback' => 'webhook#callback'
 end
 
