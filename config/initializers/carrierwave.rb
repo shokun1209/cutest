@@ -7,7 +7,7 @@ unless Rails.env.development? || Rails.env.test?
       region: 'ap-northeast-1'
     }
 
-    config.fog_directory  = 'shokunnobucket'
+    config.fog_directory  = 'shokunlinebot'
     config.cache_storage = :fog
   end
 end
