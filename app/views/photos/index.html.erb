@@ -27,24 +27,27 @@
 <!--PC用（801px以上端末）メニュー-->
 <nav id="menubar">
 <ul>
-<li><%= link_to "Home", root_path %></li>
-<li><%= link_to "Profile", root_path %></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="link.html">Link</a></li>
+<li>
+<%= link_to "Home", root_path %>
+<%= link_to "Profile", root_path %>
+<%= link_to "Gallery", root_path %>
+</li>
 </ul>
 </nav>
 
 <ul class="icon">
-<%= image_tag "icon_facebook.png" %>
-<li><a href="#"><img src="images/icon_twitter.png" alt="Twitter"></a></li>
-<li><a href="#"><img src="images/icon_instagram.png" alt="Instagram"></a></li>
+<%= link_to image_tag("icon_instagram.png"), root_path %>
+<%= link_to image_tag("icon_facebook.png"), root_path %>
+<%= link_to image_tag("icon_twitter.png"), root_path %>
 </ul>
 
 </header>
 
 <div id="contents">
 
-<aside class="inner first"><%= image_tag "mainimg.jpg" %></aside>
+<aside class="inner first">
+<%= image_tag "mainimg.jpg" %>
+</aside>
 
 <section id="new" class="inner">
 <h2>更新情報・お知らせ</h2>
@@ -95,10 +98,11 @@
 <!--小さな端末用（800px以下端末）メニュー-->
 <nav id="menubar-s">
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="link.html">Link</a></li>
+<li>
+<%= link_to "Home", root_path %>
+<%= link_to "Profile", root_path %>
+<%= link_to "Gallery", root_path %>
+</li>
 </ul>
 </nav>
 
