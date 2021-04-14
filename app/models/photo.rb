@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
   belongs_to :uploader
     
   def upload_dir
-    self.photo_date.strftime("%Y%m%d")
+    self.photo_date.strftime("%Y年 %m月 %d日")
   end
     
 end
