@@ -51,9 +51,11 @@
 
 <section id="new" class="inner">
 <h2>更新情報・お知らせ</h2>
+
 <% @photos.each do |photo| %>
-<%= image_tag photo %>
+ <%= image_tag photo.image.url %>
 <% end %>
+
 </section>
 
 

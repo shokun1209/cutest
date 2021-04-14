@@ -11,9 +11,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   # ファイル名をランダム文字列にする
-  # def filename
-  #   "#{secure_token}.#{file.extension}" if original_filename.present?
-  # end
+  def filename
+    "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
 
   protected
 

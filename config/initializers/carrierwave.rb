@@ -8,7 +8,7 @@ unless Rails.env.development? || Rails.env.test?
     }
 
     config.fog_directory  = 'shokunlinebot'
-    config.asset_host = 'https://shokunlinebot.s3.amazonaws.com'
     config.cache_storage = :fog
+    # config.asset_host = 'https://shokunlinebot.s3.amazonaws.com'
   end
 end
