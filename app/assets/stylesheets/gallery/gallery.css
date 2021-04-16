@@ -28,3 +28,16 @@ img.sized {
   margin: 10px;
   border: solid 3px black;
 }
+.show-btn{
+  display: flex;
+  /* padding: 5px; */
+  justify-content: center;
+  font-size: 30px;
+  margin: 20px;
+}
+.photo-destroy{
+  padding: 10px;
+  background-color: cadetblue;
+  text-decoration: none;
+  color: aliceblue;
+}
