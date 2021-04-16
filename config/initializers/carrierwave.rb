@@ -1,3 +1,7 @@
+require 'carrierwave/storage/abstract'
+require 'carrierwave/storage/file'
+require 'carrierwave/storage/fog'
+
 unless Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
     config.fog_credentials = {
@@ -8,7 +12,8 @@ unless Rails.env.development? || Rails.env.test?
     }
 
     config.fog_directory  = 'shokunlinebot'
+    config.fog_provider = 'fog/aws'
     config.cache_storage = :fog
-    # config.asset_host = 'https://shokunlinebot.s3.amazonaws.com'
+    config.asset_host = 'https://shokunlinebot.s3.amazonaws.com'
   end
 end
