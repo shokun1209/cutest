@@ -9,6 +9,6 @@ class GallerysController < ApplicationController
 
   def destroy
     @photo = Photo.find(params[:id])
-    redirect_to gallery_path if @photo.destroy
+    redirect_to gallerys_path if @photo.destroy
   end
 end
