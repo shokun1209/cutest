@@ -1,0 +1,26 @@
+
+.top{
+  height: 15vh;
+  background-color: rgba(9, 36, 13, 0.582);
+  position: relative;
+}
+
+.links {
+  position: absolute;
+  bottom: 2vh;
+}
+li {
+  list-style: none;
+  font-size: 30px;
+}
+.link {
+  text-decoration: none;
+  color: lightgray;
+  margin: 5vw;
+}
+.img{
+  height: 70vh;
+  width: 70vw;
+  margin-top: 2vh;
+  border: 20px solid rgba(9, 36, 13, 0.582);
+}

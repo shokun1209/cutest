@@ -1,0 +1,23 @@
+.gallery{
+  color: rgb(65, 58, 49);
+  display: flex;
+}
+.gallery-contents{
+  margin: 10px;
+  
+}
+
+img.sized {
+  width: 90%;
+  border: solid 10px rgba(9, 36, 13, 0.582);
+}
+.photo-date{
+  display: block;
+  text-decoration: none;
+}
+.photo-size{
+  width: 80%;
+  height: 80%;
+  margin: 10px;
+  border: solid 2px gray;
+}
