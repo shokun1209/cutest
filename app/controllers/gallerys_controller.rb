@@ -1,6 +1,6 @@
 class GallerysController < ApplicationController
   def index
-    @photos = Photo.all.order('photo_date DESC')
+    @photos = Photo.where(content_type:"image").order('photo_date DESC')
   end
 
   def show
