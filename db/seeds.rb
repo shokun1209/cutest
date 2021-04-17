@@ -33,3 +33,10 @@ Photo.create!(
   uploader_id: 1,
   image: File.open("./public/images/sample4.jpg")
 )
+
+Photo.create!(
+  photo_date: '2021-6-14',
+  content_type: 'image',
+  uploader_id: 1,
+  image: File.open("./public/images/sample5.jpg")
+)

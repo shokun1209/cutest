@@ -1,6 +1,7 @@
 
 .top{
-  height: 15vh;
+  height: 10vh;
+  width: 100vw;
   background-color: rgba(9, 36, 13, 0.582);
   position: relative;
 }

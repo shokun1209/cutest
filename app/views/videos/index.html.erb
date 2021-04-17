@@ -1,13 +1,14 @@
 <%= render "shared/header" %>
 
 <div class="gallery">
-<% @videos.each do |f| %>
-  <div class="gallery-contents">
- <%= link_to gallery_path(f.id) do %>
-  <%# <%= image_tag f.image_url, class: "sized" %>
-  <%= video_tag f.image_url, class: "sized" %>
-  <div class="photo-date"><%= f.photo_date %></div>
-  </div>
-<% end %>
-<% end %>
+  <% @videos.each do |f| %>
+    <div class="gallery-contents">
+      <%= link_to gallery_path(f.id),class:"gallery-link" do %>
+        <%= video_tag f.image_url, class: "sized" %>
+      <% end %>
+      <div class="photo-date">
+        <%= f.photo_date %>
+      </div>
+    </div>
+  <% end %>
 </div>

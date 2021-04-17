@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+
+<div class="show-main">
+  <div class="show-photo">
+    <%= video_tag @video.image_url, class:"photo-size" %>
+  </div>
+    <div class="show-btn">
+      <div class="destory">
+        <%= link_to "削除", gallery_path(@video.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"photo-destroy" %> 
+      </div>
+  </div>
+</div>
