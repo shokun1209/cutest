@@ -58,3 +58,5 @@ gem 'line-bot-api'
 gem 'carrierwave'
 
 gem 'fog'
+
+gem 'ransack'

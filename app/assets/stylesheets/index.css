@@ -1,14 +1,16 @@
 
 .top{
   height: 10vh;
-  width: 100vw;
+  width: 90%;
   background-color: rgba(9, 36, 13, 0.582);
-  position: relative;
+  align-items: center;
 }
 
 .links {
-  position: absolute;
-  bottom: 10%;
+  /* position: absolute; */
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 li {
   list-style: none;
@@ -16,12 +18,25 @@ li {
 }
 .link {
   text-decoration: none;
-  color: lightgray;
+  color: #000;
   margin: 5vw;
+  padding: 10px;
 }
+
+.btn{
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+
+.btn:hover{
+  color: #fff;
+  background: #000;
+}
+
 .img{
-  height: 70vh;
-  width: 70vw;
+  height: 70%;
+  width: 70%;
   margin-top: 2vh;
   border: 20px solid rgba(9, 36, 13, 0.582);
 }

@@ -6,7 +6,7 @@
   </div>
     <div class="show-btn">
       <div class="destory">
-        <%= link_to "削除", gallery_path(@photo.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"photo-destroy" %> 
+        <%= link_to "削除", gallery_path, method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"photo-destroy btn" %> 
       </div>
   </div>
 </div>

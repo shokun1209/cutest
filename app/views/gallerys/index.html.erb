@@ -1,10 +1,10 @@
 <%= render "shared/header" %>
-
+<%= render "shared/photo_search" %>
 
 <div class="gallery">
   <% @photos.each do |f| %>
-    <div class="gallery-contents">
-      <%= link_to gallery_path(f.id),class:"gallery-link" do %>
+    <div class="photo-contents">
+      <%= link_to gallery_path(f.id),class:"photo-link" do %>
         <%= image_tag f.image_url, class: "sized" %>
       <% end %>
       <div class="photo-date">
