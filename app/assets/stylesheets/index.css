@@ -1,14 +1,13 @@
 
 .top{
+  margin-top: 10vh;
   height: 10vh;
-  width: 90%;
-  background-color: rgba(9, 36, 13, 0.582);
+  width: 90vw;
   align-items: center;
 }
 
 .links {
-  /* position: absolute; */
-  margin: 20px;
+  margin: 15px;
   display: flex;
   justify-content: center;
 }
@@ -25,8 +24,9 @@ li {
 
 .btn{
   border: 2px solid #000;
-  border-radius: 0;
+  border-radius: 10px;
   background: #fff;
+  box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);
 }
 
 .btn:hover{
@@ -34,9 +34,15 @@ li {
   background: #000;
 }
 
+.main{
+  display: flex;
+  justify-content: center;
+}
+
 .img{
-  height: 70%;
-  width: 70%;
-  margin-top: 2vh;
+  height: 60%;
+  width: 60%;
+  margin-top: 5vh;
   border: 20px solid rgba(9, 36, 13, 0.582);
+  border-radius: 40px;
 }

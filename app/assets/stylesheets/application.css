@@ -14,12 +14,14 @@
  *= require_self
  */
 
- html{
+ body{
    background-image: url("main.png");
    background-size: 100vmax;
+   background-attachment: fixed;
    display: flex;
    justify-content: center;
   }
+  
   header{
     display: flex;
     justify-content: center;

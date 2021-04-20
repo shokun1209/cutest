@@ -15,8 +15,6 @@ class VideosController < ApplicationController
 
   def search
     @q = Photo.ransack(params[:q])
-    @videos = @q.result
-    # photo_date = params[:q][:photo_date_eq]
-    # @search = Photo.where(photo_date: photo_date)
+    @videos = @q.result.order('photo_date DESC')
   end
 end

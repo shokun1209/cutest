@@ -60,3 +60,5 @@ gem 'carrierwave'
 gem 'fog'
 
 gem 'ransack'
+
+gem 'jquery-rails'

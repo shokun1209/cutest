@@ -5,7 +5,7 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  padding: 10px;
+  margin: 5vh 10vw;
 }
 .photo-contents{
   margin: 20px;
@@ -17,11 +17,20 @@
   text-decoration: none;
   
 }
-img.sized {
+.sized {
   width: 100%;
   height: 80%;
-  border: solid 3px rgb(65, 58, 49);
+  border: black solid 1px;
+  display: inline-block;
+	box-shadow: 10px 10px 10px -4px rgba(0,0,0,0.6);
+	transition: .3s;
 }
+.sized:hover{
+	box-shadow: 10px 10px 20px -4px rgba(0,0,0,0.6);
+	transform: translateY(-4px);
+}
+
+
 .photo-date{
   display: block;
   color: gray;
@@ -38,6 +47,7 @@ img.sized {
   height: 80%;
   margin: 10px;
   border: solid 3px black;
+  border-radius: 20px;
 }
 .show-btn{
   display: flex;
@@ -52,7 +62,7 @@ img.sized {
 }
 
 .form{
-  margin:20px 50px 0 0;
+  margin:10vh 50px 0 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -62,9 +72,11 @@ img.sized {
   width: 10vw;
   background-color: #fff;
   color: grey;
+  border-radius:5px;
+  box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.6);
 }
 
 .submit{
-  height: 30px;
-  font-size: 16px;
+  padding: 8px;
+  font-size: 15px;
 }

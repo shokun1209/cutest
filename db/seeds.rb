@@ -13,30 +13,40 @@
 #   image: File.open("./public/images/sample1.jpg")
 # )
 
-Photo.create!(
-  photo_date: '2021-5-14',
-  content_type: 'video',
-  uploader_id: 1,
-  image: File.open("./public/images/テスト3.mp4")
+# Photo.create!(
+#   photo_date: '2021-5-14',
+#   content_type: 'video',
+#   uploader_id: 1,
+#   image: File.open("./public/images/テスト3.mp4")
+# )
+
+# Photo.create!(
+#   photo_date: '2021-4-14',
+#   content_type: 'video',
+#   uploader_id: 1,
+#   image: File.open("./public/images/テスト2.mp4")
+# )
+
+# Photo.create!(
+#   photo_date: '2021-5-14',
+#   content_type: 'video',
+#   uploader_id: 1,
+#   image: File.open("./public/images/テスト1.mp4")
+# )
+
+# Photo.create!(
+#   photo_date: '2021-6-14',
+#   content_type: 'video',
+#   uploader_id: 1,
+#   image: File.open("./public/images/テスト1.mp4")
+# )
+
+Uploader.create!(
+  name: 'しょーや'
+  # line_id: 'ac.mear'
 )
 
-Photo.create!(
-  photo_date: '2021-4-14',
-  content_type: 'video',
-  uploader_id: 1,
-  image: File.open("./public/images/テスト2.mp4")
-)
-
-Photo.create!(
-  photo_date: '2021-5-14',
-  content_type: 'video',
-  uploader_id: 1,
-  image: File.open("./public/images/テスト1.mp4")
-)
-
-Photo.create!(
-  photo_date: '2021-6-14',
-  content_type: 'video',
-  uploader_id: 1,
-  image: File.open("./public/images/テスト1.mp4")
+Uploader.create!(
+  name: 'まりこ'
+  # line_id: 'poyoyon'
 )
