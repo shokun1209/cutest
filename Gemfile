@@ -62,3 +62,5 @@ gem 'fog'
 gem 'ransack'
 
 gem 'jquery-rails'
+
+gem 'pry-rails'

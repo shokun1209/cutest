@@ -1,0 +1,21 @@
+<% @videos = Photo.where(content_type:"video").order('photo_date DESC') %>
+<% @q = Photo.ransack(params[:q]) %>
+
+<%= render "shared/header" %>
+<%= render "shared/video_search" %>
+
+<div class="video">
+  <% @videos.each do |f| %>
+    <div class="video-contents">
+      <%= link_to photo_path(f.id) do %>
+        <%= video_tag(f.image_url, size: "170x300", width:"300", controls: true, class: "video-size") %>
+      <% end %>
+      <div class="photo-date">
+        <%= f.photo_date %>
+      </div>
+      <div class="photo-date">
+        投稿者 <%= f.uploader.name%>
+      </div>
+    </div>
+  <% end %>
+</div>

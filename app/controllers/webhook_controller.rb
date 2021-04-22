@@ -4,8 +4,8 @@ class WebhookController < ApplicationController
   before_action :set_line_client
   protect_from_forgery :except => [:callback]
   
-  CHANNEL_SECRET = ENV['CHANNEL_SECRET'] # 記録しておいたChannel Secret
-  CHANNEL_ACCESS_TOKEN = ENV['CHANNEL_ACCESS_TOKEN'] # 記録しておいたアクセストークン
+  CHANNEL_SECRET = ENV['CHANNEL_SECRET']
+  CHANNEL_ACCESS_TOKEN = ENV['CHANNEL_ACCESS_TOKEN']
   
   def callback
     body = request.body.read
@@ -25,7 +25,7 @@ class WebhookController < ApplicationController
         end
         if Photo.create(image: temp, uploader_id: find_or_create_uploader.id, photo_date: Time.zone.today, content_type: event.type)
           type_str = event.type == "image" ? "画像" : "動画"
-          message = { type: 'text', text: "#{type_str}を登録しました。" }
+          message = { type: 'text', text: "#{type_str}を登録しました！" }
         end
       end
       

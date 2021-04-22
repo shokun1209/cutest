@@ -1,4 +1,8 @@
 
+.error-message{
+  color: red;
+}
+
 .top{
   margin-top: 10vh;
   height: 10vh;
@@ -45,4 +49,32 @@ li {
   margin-top: 5vh;
   border: 20px solid rgba(9, 36, 13, 0.582);
   border-radius: 40px;
+}
+
+.message{
+  text-align: left;
+  margin-bottom: 50px;
+  display: inline-block;
+}
+.contents{
+  width: 500px;
+  margin-top: 50px;
+  padding:10px;
+  border: rgba(0, 0, 0, 0.438) solid 0.3px;
+  box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);
+  background-color: #fff;
+}
+
+.message-text{
+  margin-bottom: 20px;
+}
+.message-name{
+  font-size: 14px;
+  color: gray;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.message-form{
+  justify-content: center;
 }

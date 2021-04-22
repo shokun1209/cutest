@@ -1,0 +1,39 @@
+<%= render "shared/header" %>
+
+<div class="show-main">
+  <div class="show-photo">
+    <% if @photo.content_type == "image" %>
+      <%= image_tag @photo.image_url, class:"photo-size" %>
+    <% else %>
+      <%= video_tag(@photo.image_url, size:"400x700" ,controls: true,muted: true) %>
+    <% end %>
+  </div>
+
+  <div class="message">
+  <% @messages.each do |message| %>
+    <div class="contents">
+      <div class="message-text">
+        <%= message.text %>
+      </div>
+      <div class="message-name">
+        by <%= message.name %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+
+  <div class="message-form" >
+    <%= form_with(model: [@photo,@message],local: true) do |f| %>
+  <%= render 'shared/error', model: f.object %>
+    <%= f.text_field :name, placeholder: "name", class:"message-content name" %>
+    <%= f.text_area :text, placeholder: "message", class:"message-content text" %>
+    <%= f.submit "SEND", class:"message-content send btn" %>
+    <% end %>
+  </div>
+    <div class="show-btn">
+      <div class="destory">
+        <%= link_to "削除", photo_path(@photo.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"photo-destroy btn" %> 
+      </div>
+  </div>
+</div>

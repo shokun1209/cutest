@@ -1,0 +1,20 @@
+<% @q = Photo.ransack(params[:q]) %>
+<% @photos = @q.result.order('photo_date DESC') %>
+
+<%= render "shared/header" %>
+<%= render "shared/video_search" %>
+
+<div class="video">
+  <% @photos.each do |f| %>
+  <% if f.content_type == "video" %>
+    <div class="video-contents">
+      <%= link_to photo_path(f.id),class:"video-link" do %>
+        <%= video_tag(f.image_url, size: "170x300", width:"300", controls: true) %>
+      <% end %>
+      <div class="photo-date">
+        <%= f.photo_date %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

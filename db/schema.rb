@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_14_081127) do
+ActiveRecord::Schema.define(version: 2021_04_20_101629) do
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.text "text", null: false
+    t.string "name", null: false
+    t.bigint "photo_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["photo_id"], name: "index_messages_on_photo_id"
+  end
 
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image", collation: "utf8mb4_general_ci"
@@ -30,4 +39,5 @@ ActiveRecord::Schema.define(version: 2021_04_14_081127) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "messages", "photos"
 end

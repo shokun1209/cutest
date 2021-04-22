@@ -1,0 +1,20 @@
+<% @q = Photo.ransack(params[:q]) %>
+<% @photos = @q.result.order('photo_date DESC') %>
+
+<%= render "shared/header" %>
+<%= render "shared/photo_search" %>
+
+<div class="gallery">
+  <% @photos.each do |f| %>
+    <% if f.content_type == "image"%>
+      <div class="photo-contents">
+        <%= link_to photo_path(f.id),class:"photo-link" do %>
+          <%= image_tag f.image_url, class: "sized" %>
+        <% end %>
+        <div class="photo-date">
+          <%= f.photo_date %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

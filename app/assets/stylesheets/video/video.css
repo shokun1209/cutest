@@ -4,11 +4,11 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  margin: 5vh 10vw;
+  margin: 50px;
 }
 .video-contents{
   margin: 20px;
-  height: 300px;
+  height: 400px;
   width: 200px;
 }
 .video-size{
@@ -21,31 +21,42 @@
 	border: none;
 }
 
-.video-link{
-  text-decoration: none;
+.show-main{
+  text-align: center;
 }
 
-.photo-date{
-  display: block;
-  color: gray;
-  font-size: 20px;
-}
-
-.show-photo{
-  margin: 5vh;
-  display: flex;
-  justify-content: center; 
-}
-
-.show-btn{
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  margin: 20px;
-}
 .photo-destroy{
   padding: 10px;
   background-color: cadetblue;
   text-decoration: none;
   color: aliceblue;
+}
+
+.message-form{
+  display: flex;
+  justify-content: center;
+}
+.message-content{
+  display: block;
+  margin: 10px;
+}
+.name{
+  height: 20px;
+  width: 10vw;
+  padding: 5px;
+  font-size: 15px;
+}
+.text{
+  height: 20vh;
+  width: 30vw;
+  padding: 5px;
+  font-size: 15px;
+}
+.send{
+  height:30px;
+  width: 10vw;
+}
+form{
+  box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);
+  margin-bottom: 10vh;
 }
