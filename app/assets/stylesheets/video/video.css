@@ -4,7 +4,9 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  margin: 50px;
+  width: 100%;
+  padding: 15vh;
+  box-sizing:border-box;
 }
 .video-contents{
   margin: 20px;
@@ -18,18 +20,23 @@
 }
 .video-size:hover{
 	box-shadow: 10px 10px 20px -4px rgba(0,0,0,0.6);
-	border: none;
+	/* transform: translateY(-4px); */
 }
 
 .show-main{
   text-align: center;
 }
 
+.video-show{
+  height: 100%;
+}
+
 .photo-destroy{
   padding: 10px;
-  background-color: cadetblue;
+  background-color: #fff;
   text-decoration: none;
-  color: aliceblue;
+  color: #000;
+  font-size: 15px;
 }
 
 .message-form{
@@ -38,7 +45,7 @@
 }
 .message-content{
   display: block;
-  margin: 10px;
+  margin: 20px;
 }
 .name{
   height: 20px;
@@ -55,8 +62,5 @@
 .send{
   height:30px;
   width: 10vw;
-}
-form{
-  box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);
-  margin-bottom: 10vh;
+  box-shadow: none;
 }

@@ -54,13 +54,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'line-bot-api'
-
 gem 'carrierwave'
-
 gem 'fog'
-
 gem 'ransack'
-
-gem 'jquery-rails'
-
 gem 'pry-rails'
+gem 'bxslider-rails'
