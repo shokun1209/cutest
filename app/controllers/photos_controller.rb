@@ -18,7 +18,7 @@ class PhotosController < ApplicationController
   def destroy
     if @photo.content_type == "image" && @photo.destroy 
       redirect_to action: :photo
-    else @photo.destroy
+    else @photo.content_type == "video" && @photo.destroy
       redirect_to action: :video
     end
   end

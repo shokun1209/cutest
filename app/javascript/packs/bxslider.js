@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('.bxslider').bxSlider({
     auto: true,
-    speed: 1500,
+    speed: 2000,
     moveSlides: 1,
     pause: 3000,
     maxSlides: 1,

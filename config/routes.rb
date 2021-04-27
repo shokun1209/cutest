@@ -8,13 +8,6 @@ Rails.application.routes.draw do
   get '/photo/search', to: "photos#photo_search"
   get '/video/search', to: "photos#video_search"
   post '/callback' => 'webhook#callback'
-  # resources :gallerys, only: [:index, :show, :destroy] do
-  #   resources :messages, only: [:create,:destroy]
-  # end
-
-  # resources :videos, only: [:index, :show, :destroy] do
-  #   resources :messages, only: [:create,:destroy]
-  # end
 
 end
 

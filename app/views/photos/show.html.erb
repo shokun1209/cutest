@@ -18,6 +18,9 @@
       <div class="message-name">
         by <%= message.name %>
       </div>
+      <div class="message-delete">
+      <%= link_to "削除", photo_message_path(message.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'} %>
+      </div>
     </div>
   <% end %>
   </div>
