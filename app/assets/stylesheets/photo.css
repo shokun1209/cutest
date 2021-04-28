@@ -5,7 +5,7 @@
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
   padding: 15vh;
 }
 .photo-contents{
@@ -31,7 +31,7 @@
 }
 .photo-date{
   display: block;
-  color: gray;
+  color:dimgray;
   font-size: 15px;
 }
 .show-photo{

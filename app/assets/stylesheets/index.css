@@ -78,8 +78,8 @@ footer{
    display: flex;
    justify-content: center;
    box-sizing:border-box;
-   width: 100vmax;
-   padding:10vh ;
+   width: 100%;
+   padding:10vh;
  }
 
 
@@ -108,10 +108,10 @@ footer{
 /* 投稿フォーム ここから */
 .form{
   box-sizing:border-box;
-  padding:10vh 10vw 0 0;
+  padding:10vh 5vw 0 0;
   display: flex;
   justify-content: flex-end;
-  width: 100vw;
+  width: 100%;
 }
 .form-content{
   box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);

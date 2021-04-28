@@ -3,10 +3,9 @@ $(document).ready(function(){
     auto: true,
     speed: 2000,
     moveSlides: 1,
-    pause: 3000,
+    pause: 4000,
     maxSlides: 1,
     randomStart: true,
     controls: true,
-
   });
 });
