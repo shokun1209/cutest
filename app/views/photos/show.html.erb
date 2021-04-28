@@ -9,6 +9,12 @@
     <% end %>
   </div>
 
+  <div class="show-btn">
+    <div class="destory">
+      <%= link_to "DELETE", photo_path(@photo.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"photo-destroy btn" %> 
+    </div>
+  </div>
+
   <div class="message">
   <% @messages.each do |message| %>
     <div class="contents">
@@ -17,16 +23,16 @@
       </div>
       <div class="message-name">
         by <%= message.name %>
-      </div>
-      <div class="message-delete">
-      <%= link_to "削除", photo_message_path(message.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'} %>
+        <div class="message-delete">
+        <%= link_to "削除", photo_message_path(message.photo_id, message.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'} %>
+        </div>
       </div>
     </div>
   <% end %>
   </div>
 
 
-  <div class="message-form" >
+  <div class="post-form" >
     <div class="form-content">
       <%= form_with(model: [@photo,@message],local: true) do |f| %>
         <%= render 'shared/error', model: f.object %>
@@ -35,10 +41,5 @@
         <%= f.submit "SEND", class:"message-content send btn" %>
       <% end %>
     </div>
-  </div>
-    <div class="show-btn">
-      <div class="destory">
-        <%= link_to "DELETE", photo_path(@photo.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"photo-destroy btn" %> 
-      </div>
   </div>
 </div>

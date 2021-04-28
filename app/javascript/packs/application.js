@@ -10,6 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("./bxslider")
 require("../jquery.bxslider.min")
+require("./scroll")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -18,4 +19,3 @@ require("../jquery.bxslider.min")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-

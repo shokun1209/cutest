@@ -1,23 +1,89 @@
-
 .error-message{
   color: red;
   font-size: 15px;
   text-align: left;
 }
-
 body{
   background-image: url("main.png");
   background-size: 100vmax;
   background-attachment: fixed;
-  display: flex;
-  justify-content: center;
  }
- 
- header{
+header{
+   display: flex;
+   justify-content: center;
+   margin-top: 10vh;
+ }
+footer{
+  width: 100%;
+  height: 30px;
+  color:dimgray;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+ .scroll{
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  cursor:pointer;
+  transition: .3s;
+ }
+.scroll-btn{
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+  text-align: center;
+  font-size: 25px;
+}
+.scroll:hover{
+  color: #fff;
+  background: #000;
+}
+ .btn{
+   border: 2px solid #000;
+   border-radius: 10px;
+   background: #fff;
+   box-shadow: 7px 7px 10px -4px rgba(0,0,0,0.6);
+   transition: .3s;
+  }
+  .btn:hover{
+    color: #fff;
+    background: #000;
+  }
+ .links {
+   margin-top: 30px;
    display: flex;
    justify-content: center;
  }
+ li {
+   list-style: none;
+   font-size: 30px;
+ }
+ .link {
+   text-decoration: none;
+   color: #000;
+   margin: 5vw;
+   padding: 10px;
+ }
+ 
+ .main{
+   display: flex;
+   justify-content: center;
+   box-sizing:border-box;
+   width: 100vmax;
+   padding:10vh ;
+ }
 
+
+/* スライダー ここから */
  .bx-wrapper{
    width: 70%;
    height: 100%;
@@ -31,51 +97,58 @@ body{
   height: 100%;
   width: auto;
 }
+/* スライダー ここまで */
 
-.links {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
-li {
-  list-style: none;
-  font-size: 30px;
-}
-.link {
-  text-decoration: none;
-  color: #000;
-  margin: 5vw;
-  padding: 10px;
+.show-main{
+  width: 100%;
+  height: 100%;
 }
 
-.btn{
-  border: 2px solid #000;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 7px 7px 10px -4px rgba(0,0,0,0.6);
-  transition: .3s;
-}
 
-.btn:hover{
-  color: #fff;
-  background: #000;
-}  
-
-.main{
-  display: flex;
-  justify-content: center;
+/* 投稿フォーム ここから */
+.form{
   box-sizing:border-box;
+  padding:10vh 10vw 0 0;
+  display: flex;
+  justify-content: flex-end;
   width: 100vw;
-  padding:10vh ;
 }
-
-.slider{
-  height: 60%;
-  width: 60%;
-  border: 20px solid rgba(9, 36, 13, 0.582);
-  border-radius: 40px;
+.form-content{
+  box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);
+  border: rgba(0, 0, 0, 0.438) solid 0.3px;
+  background-color: #fff;
+  margin-bottom: 10vh;
 }
+.send{
+  height:30px;
+  width: 10vw;
+  box-shadow: none;
+  cursor:pointer;
+}
+/* 投稿フォーム ここまで */
 
+
+/* メッセージ ここから */
+.post-form{
+  display: flex;
+  justify-content: center;
+}
+.message-content{
+  display: block;
+  margin: 20px;
+}
+.name{
+  height: 20px;
+  width: 10vw;
+  padding: 5px;
+  font-size: 15px;
+}
+.text{
+  height: 20vh;
+  width: 30vw;
+  padding: 5px;
+  font-size: 15px;
+}
 .message{
   text-align: left;
   margin-bottom: 50px;
@@ -89,13 +162,19 @@ li {
   box-shadow: 10px 10px 10px -8px rgba(0,0,0,0.6);
   background-color: #fff;
 }
-
 .message-text{
   margin-bottom: 20px;
 }
 .message-name{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: gray;
+}
+.message-delete{
   font-size: 14px;
   color: gray;
   text-align: right;
   margin-right: 20px;
 }
+/* メッセージ ここまで */

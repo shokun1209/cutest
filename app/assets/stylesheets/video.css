@@ -1,0 +1,26 @@
+
+.video-contents{
+  margin: 20px;
+  height: 400px;
+  width: 200px;
+}
+.video-size{
+  border: rgba(0, 0, 0, 0.438) solid 0.3px;
+	box-shadow: 10px 10px 10px -4px rgba(0,0,0,0.6);
+	transition: .3s;
+}
+.video-size:hover{
+	box-shadow: 10px 10px 20px -4px rgba(0,0,0,0.6);
+}
+
+.show-main{
+  text-align: center;
+}
+
+.video-show{
+  height: 100%;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.6);
+  /* border: rgba(0, 0, 0, 0.438) solid 0.3px; */
+}
+
+

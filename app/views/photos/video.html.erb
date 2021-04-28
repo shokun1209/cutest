@@ -4,7 +4,7 @@
 <%= render "shared/header" %>
 <%= render "shared/video_search" %>
 
-<div class="video">
+<div class="gallery">
   <% @videos.each do |f| %>
     <div class="video-contents">
       <%= link_to photo_path(f.id) do %>
