@@ -12,9 +12,9 @@
 }
 body{
   background-image: url("main3.jpg");
-  background-size: 100vmax;
+  background-size: 100vh;
   background-attachment: fixed;
-  background-color: lightgray;
+  background-size:cover;
  }
 header{
    background-color: black;
@@ -33,8 +33,8 @@ footer{
   position: relative;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.685);
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   position: fixed;
   border: rgba(0, 0, 0, 0.685) solid 2px;
   bottom: 5vh;
@@ -99,16 +99,19 @@ footer{
 /* スライダー ここから */
 .bx-wrapper{
   width: 70%;
-  height: 90%;
+  height: 80%;
 }
 
 .bxslider{
-  height: 70vh;
+  height: 100%;
   width: 100%;
+  position: relative;
 }
 .top_image{
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
   height: 100%;
-  width: auto;
 }
 /* スライダー ここまで */
 
@@ -222,3 +225,118 @@ footer{
   color: rgb(50, 50, 50);
 }
 /* プロフィール ここまで */
+
+/* スマホ表示時 */
+@media screen and (max-width: 599px) {
+  .all{
+    border-radius: 5px;
+    margin: 3vh 3vw 3vh 3vw;
+    background-color: rgba(245, 245, 245, 0.486);
+    padding: 5px 0 5vh 0;
+  }
+  header{
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+  }
+  footer{
+    font-size: 12px;
+  }
+  .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .link {
+    box-sizing: border-box;
+    font-size: 20px;
+    height: 100%;
+    padding: 5%;
+  }
+  .profile{
+    width: 90%;
+    padding: 0 5% 5% 5%;
+  }
+  .profile-top{
+    font-size: 16px;
+    margin: 5% 5% 3% 5%;
+  }
+  .profile-content{
+    justify-content: space-around;
+  }
+  p{
+    font-size: 10px;
+  }
+  .form{
+    padding:2vh 0 0 0;
+    justify-content: center;
+  }
+
+  /* メッセージ */
+  .message{
+    text-align: left;
+    margin-bottom: 5vh;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+  }
+  .message-content{
+    display: block;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .contents{
+    width: 85%;
+    margin-top: 20px;
+  }
+  .message-text{
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .message-name{
+    font-size: 12px;
+    margin-left: 2%;
+  }
+  .message-delete{
+    font-size: 12px;
+  }
+  /* メッセージ ここまで */
+
+
+  .post-form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .form-content{
+    width: 90%;
+    margin-bottom: 3vh;
+  }
+  .name{
+    height: 15px;
+    width: 40%;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.438) solid 0.3px;
+  }
+  .text{
+    height: 10vh;
+    width: 80%;
+    padding: 5px;
+    font-size: 13px;
+  }
+  .send{
+    height:30px;
+    width: 20vw;
+    box-shadow: none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}

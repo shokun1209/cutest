@@ -6,7 +6,7 @@
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 15vh;
+  padding: 5vh;
 }
 .photo-contents{
   margin: 30px;
@@ -59,7 +59,6 @@
 .show-btn{
   display: flex;
   justify-content: center;
-  font-size: 30px;
   margin: 20px;
 }
 .photo-destroy{
@@ -72,3 +71,46 @@
   border-radius: 8px;
 }
 /* 削除ボタン ここまで */
+
+@media screen and (max-width: 599px) {
+  .gallery{
+    box-sizing: border-box;
+    color: rgb(65, 58, 49);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+  .photo-contents{
+    margin: 15px;
+    height: 150px;
+    width: 100px;
+  }
+  .photo-date{
+    font-size: 10px;
+  }
+  .show-photo{
+    margin-top: 3vh;
+  }
+  .photo-size{
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .show-date{
+    margin-top: 0px;
+    font-size: 14px;
+  }
+  .show-btn{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+  }
+  .photo-destroy{
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+}

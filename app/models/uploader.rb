@@ -1,3 +1,3 @@
 class Uploader < ApplicationRecord
-  has_many :uploader
+  has_many :photos
 end
