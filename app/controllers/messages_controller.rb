@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_photo, only: [:create, :destroy]
+  before_action :basic_auth
 
   def create
     @message = Message.create(message_params)
@@ -24,5 +25,11 @@ class MessagesController < ApplicationController
 
   def set_photo
     @photo = Photo.find(params[:photo_id])
+  end
+
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
+    end
   end
 end

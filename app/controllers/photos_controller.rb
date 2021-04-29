@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :destroy]
+  before_action :basic_auth
 
   def index
   end
@@ -32,6 +33,12 @@ class PhotosController < ApplicationController
   private
   def set_photo
     @photo = Photo.find(params[:id])
+  end
+
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
+    end
   end
 
 end
