@@ -1,6 +1,7 @@
 <% @q = Photo.ransack(params[:q]) %>
 <% @photos = @q.result.order('photo_date DESC') %>
 
+<div class="all">
 <%= render "shared/header" %>
 <%= render "shared/photo_search" %>
 
@@ -15,9 +16,11 @@
           <%= f.photo_date %>
         </div>
         <div class="photo-date">
-          投稿者 <%= f.uploader.name%>
+          投稿者: <%= f.uploader.name%>
         </div>
       </div>
     <% end %>
   <% end %>
+</div>
+
 </div>

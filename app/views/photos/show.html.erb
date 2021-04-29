@@ -1,3 +1,4 @@
+<div class="all">
 <%= render "shared/header" %>
 
 <div class="show-main">
@@ -7,6 +8,9 @@
     <% else %>
       <%= video_tag(@photo.image_url, size:"400x700" ,controls: true,muted: true,class: "video-show") %>
     <% end %>
+  </div>
+  <div class="show-date">
+    <%= @photo.photo_date %>　　投稿者:<%= @photo.uploader.name %>
   </div>
 
   <div class="show-btn">
@@ -23,9 +27,7 @@
       </div>
       <div class="message-name">
         by <%= message.name %>
-        <div class="message-delete">
-        <%= link_to "削除", photo_message_path(message.photo_id, message.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'} %>
-        </div>
+        <%= link_to "削除", photo_message_path(message.photo_id, message.id), method: :delete, data: {confirm: '一度削除すると復旧はできません。 本当に削除しますか？'}, class:"message-delete"%>
       </div>
     </div>
   <% end %>
@@ -42,4 +44,6 @@
       <% end %>
     </div>
   </div>
+</div>
+
 </div>
