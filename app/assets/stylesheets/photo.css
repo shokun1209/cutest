@@ -93,10 +93,12 @@
   }
   .show-photo{
     margin-top: 3vh;
+    height: 100%;
+    width: 100%;
   }
   .photo-size{
     width: 90%;
-    height: auto;
+    height: 90%;
     border-radius: 5px;
   }
   .show-date{

@@ -10,7 +10,7 @@
   font-size: 15px;
   text-align: left;
 }
-body{
+html{
   background-image: url("main3.jpg");
   background-size: 100vh;
   background-attachment: fixed;
@@ -56,6 +56,10 @@ footer{
   border: black solid 2px;
   color:black;
   background-color: whitesmoke;
+}
+.scroll:active{
+  background-color: rgba(0, 0, 0, 0.685);
+  color: lightgray;
 }
 .btn{
   border: 2px solid #000;
