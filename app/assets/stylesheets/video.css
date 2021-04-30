@@ -9,6 +9,9 @@
 	box-shadow: 10px 10px 10px -4px rgba(0,0,0,0.6);
 	transition: .3s;
 }
+.sumaho{
+  display: none;
+}
 .video-size:hover{
 	box-shadow: 10px 10px 20px -4px rgba(0,0,0,0.6);
 }
@@ -28,9 +31,14 @@
     width: 120px;
     margin: 3vh 5vw 5vh 5vw;
   }
-  .video-size{
+  .sumaho{
     width: 113px;
     height: 200px;
+    box-shadow: 10px 10px 10px -4px rgba(0,0,0,0.6);
+    display: inline;
+  }
+  .video-size{
+    display: none;
   }
   .video-show{
     width: 90%;

@@ -10,6 +10,7 @@
     <div class="video-contents">
       <%= link_to photo_path(f.id) do %>
         <%= video_tag(f.image_url, size: "170x300", width:"300", controls: true, muted: true, autobuffer: true, class: "video-size") %>
+        <%= video_tag(f.image_url, size: "170x300", width:"300", controls: false, muted: true, autobuffer: true, class: "sumaho") %>
       <% end %>
       <div class="photo-date">
         <%= f.photo_date %>
