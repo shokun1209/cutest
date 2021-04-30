@@ -6,7 +6,7 @@
     <% if @photo.content_type == "image" %>
       <%= image_tag @photo.image_url, class:"photo-size" %>
     <% else %>
-      <%= video_tag(@photo.image_url, size:"400x700" ,controls: true,muted: true,class: "video-show") %>
+      <%= video_tag(@photo.image_url, size:"400x700" ,controls: true,muted: true, autobuffer: true, class: "video-show") %>
     <% end %>
   </div>
   <div class="show-date">

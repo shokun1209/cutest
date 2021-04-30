@@ -264,11 +264,18 @@ footer{
     height: 100%;
   }
   .link {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-size: 20px;
     height: 100%;
     padding: 5%;
+    border-right: solid 0.1px black;
+    border-left: solid 0.1px black;
     background-color: black;
+  }
+  .scroll:hover{
+    border: black solid 2px;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.685);
   }
   .profile{
     width: 90%;
