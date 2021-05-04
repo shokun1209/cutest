@@ -4,9 +4,9 @@
   background-color: white;
   color: grey;
   border: black solid 2px;
-  /* border: rgba(0, 0, 0, 0.438) solid 1px; */
   border-radius:5px;
   box-shadow: 5px 6px 6px -4px rgba(0,0,0,0.6);
+  font-size: 12px;
 }
 
 .submit{
